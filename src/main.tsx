@@ -2,14 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./App";
-import Features from "./components/Features";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+
+import Features from "./components/pages/Features";
+import PrivateRoute from "./components/utils/PrivateRoute";
+import HomePage from "./components/pages/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
   },
   {
     path: "/features",

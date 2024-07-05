@@ -1,13 +1,7 @@
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useLoaderData } from "react-router-dom";
-
-interface TPost {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
+import { TPost } from "../types/types";
 
 const PostTable = () => {
   const featureData = useLoaderData();

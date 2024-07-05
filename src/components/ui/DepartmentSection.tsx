@@ -9,11 +9,7 @@ import {
 import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-
-interface Department {
-  department: string;
-  sub_departments: string[];
-}
+import { Department } from "../types/types";
 
 const array: Department[] = [
   {

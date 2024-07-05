@@ -1,12 +1,7 @@
 import { TextField, Button, Stack } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
-type TFormValues = {
-  name: string;
-  number: string;
-  email: string;
-};
+import { TFormValues } from "../types/types";
 
 const AuthForm = () => {
   const navigate = useNavigate();

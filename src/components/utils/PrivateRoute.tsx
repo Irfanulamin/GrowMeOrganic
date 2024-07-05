@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import AlertDialog from "../AlertDialog";
+import AlertDialog from "../ui/AlertDialog";
 
 const PrivateRoute = ({ children }: { children: ReactNode }) => {
   const user = localStorage.getItem("GrowMeOrganicAuth");

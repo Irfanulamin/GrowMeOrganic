@@ -1,5 +1,5 @@
-import DepartmentSection from "./DepartmentSection";
-import PostTable from "./PostTable";
+import DepartmentSection from "../ui/DepartmentSection";
+import PostTable from "../ui/PostTable";
 
 const Features = () => {
   return (
