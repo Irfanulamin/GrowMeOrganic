@@ -6,12 +6,14 @@ import { TFormValues } from "../types/types";
 const AuthForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, formState } = useForm<TFormValues>();
+
   const onSubmit = (formValue: TFormValues) => {
     localStorage.setItem("GrowMeOrganicAuth", JSON.stringify(formValue));
     if (localStorage.getItem("GrowMeOrganicAuth")) {
       navigate("/features");
     }
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="my-12">
       <Stack spacing={2} maxWidth={600}>
@@ -29,7 +31,7 @@ const AuthForm = () => {
               message: "Name cannot exceed 30 characters",
             },
             pattern: {
-              value: /^[a-zA-Z\s]*$/, // Allows only letters and spaces
+              value: /^[a-zA-Z\s]*$/,
               message: "Please enter a valid name (only letters allowed)",
             },
           })}
@@ -50,7 +52,7 @@ const AuthForm = () => {
           })}
         />
         {formState.errors.number?.message && (
-          <p className="text-red-500">{formState.errors.number?.message}</p> // Adjusted to display error directly
+          <p className="text-red-500">{formState.errors.number?.message}</p>
         )}
         <TextField
           label="Email"

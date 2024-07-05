@@ -100,7 +100,7 @@ const DepartmentSection = () => {
               <Collapse in={!!openDepartments[element.department]}>
                 <List sx={{ width: 300 }}>
                   {element.sub_departments.map((sub_department, subIndex) => (
-                    <ListItem className="ml-10" key={subIndex}>
+                    <ListItem className="ml-7" key={subIndex}>
                       <ListItemButton>
                         <Checkbox
                           checked={!!checkedItems[sub_department]}
