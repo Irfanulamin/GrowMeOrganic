@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Navigate } from "react-router-dom";
+import AlertDialog from "../AlertDialog";
 
 const PrivateRoute = ({ children }: { children: ReactNode }) => {
   const user = localStorage.getItem("GrowMeOrganicAuth");
@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }: { children: ReactNode }) => {
     return children;
   }
 
-  return <Navigate to="/" />;
+  return <AlertDialog />;
 };
 
 export default PrivateRoute;
